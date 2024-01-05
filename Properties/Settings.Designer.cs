@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Attendance_System_81.Properties
+namespace Attendance_System81.Properties
 {
 
 
