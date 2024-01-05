@@ -1,0 +1,12 @@
+C:\Users\LENOVO\source\repos\Attendance System81\bin\Debug\Attendance System81.exe.config
+C:\Users\LENOVO\source\repos\Attendance System81\bin\Debug\Attendance System81.exe
+C:\Users\LENOVO\source\repos\Attendance System81\bin\Debug\Attendance System81.pdb
+C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance System81.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance_System81.main.Forms.FormLogin.resources
+C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance_System81.Properties.Resources.resources
+C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance System81.csproj.GenerateResource.cache
+C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance System81.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance System81.exe
+C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance System81.pdb
+C:\Users\LENOVO\source\repos\Attendance System81\bin\Debug\Attendance.dll
+C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance System81.csproj.CopyComplete
