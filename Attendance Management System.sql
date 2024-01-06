@@ -12,7 +12,6 @@ CREATE TABLE User_Table
 	User_Email VARCHAR(30),
 	User_Role VARCHAR(5),
 	User_Add VARCHAR(150),
-	
 	CONSTRAINT User_Table_PK PRIMARY KEY (User_Id)
 );
 
