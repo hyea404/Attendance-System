@@ -13,7 +13,8 @@ namespace Attendance_System81.main.User_Control
 {
     public partial class UserControlAddClass : UserControl
     {
-        private string sql = @"Data Source = .\SQLEXPRESS; Initial Catalog = Attendance_Management_System; Integrated Security = True;";
+        private string sql = @"Data Source=.\SQLEXPRESS;Initial Catalog=Attendance_Management_System;Integrated Security=True;";
+
 
         private string CID = "";
         public UserControlAddClass()
@@ -31,12 +32,16 @@ namespace Attendance_System81.main.User_Control
         {
             textBoxName.Clear();
             textBoxHmStudent.Clear();
+            textBoxMale.Clear();
+            textBoxFemale.Clear();
             tabControlAddClass.SelectedTab = tabPageAddClass;
         }
         private void ClearTextBox1()
         {
             textBoxName1.Clear();
             textBoxHmStudent1.Clear();
+            textBoxMale1.Clear();
+            textBoxFemale1.Clear();
             CID = "";
         }
 
@@ -47,13 +52,16 @@ namespace Attendance_System81.main.User_Control
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if(textBoxName.Text.Trim() == string.Empty || textBoxHmStudent.Text.Trim() == string.Empty)
+            if (textBoxName.Text.Trim() == string.Empty || textBoxHmStudent.Text.Trim() == string.Empty || textBoxMale.Text.Trim() == string.Empty || textBoxFemale.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("Fill out all data.", "Require all fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
             {
+                bool check = Attendance.Attendance.AddClass(textBoxName.Text.Trim(), textBoxHmStudent.Text.Trim(), textBoxMale.Text.Trim(), textBoxFemale.Text.Trim(), sql);
+                
+                if (check)
                 ClearTextBox();
             }
         }
@@ -104,6 +112,8 @@ namespace Attendance_System81.main.User_Control
                 CID = row.Cells[0].Value.ToString();
                 textBoxName1.Text = row.Cells[1].Value.ToString();
                 textBoxHmStudent1.Text = row.Cells[2].Value.ToString();
+                textBoxMale1.Text = row.Cells[3].Value.ToString();
+                textBoxFemale1.Text = row.Cells[4].Value.ToString();
             }
         }
 
@@ -111,14 +121,17 @@ namespace Attendance_System81.main.User_Control
         {
             if (CID != "")
             {
-                if (textBoxName1.Text.Trim() == string.Empty || textBoxHmStudent1.Text.Trim() == string.Empty)
+                if (textBoxName1.Text.Trim() == string.Empty || textBoxHmStudent1.Text.Trim() == string.Empty || textBoxMale1.Text.Trim() == string.Empty || textBoxFemale1.Text.Trim() == string.Empty)
                 {
                     MessageBox.Show("Fill out all data.", "Require all fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 else
                 {
-                    ClearTextBox1();
+                    bool check = Attendance.Attendance.UpdateClass(CID, textBoxName1.Text.Trim(), textBoxHmStudent1.Text.Trim(), textBoxMale1.Text.Trim(), textBoxFemale1.Text.Trim(), sql);
+
+                    if (check)
+                        ClearTextBox1();
                 }
             }
             else
@@ -131,17 +144,20 @@ namespace Attendance_System81.main.User_Control
         {
             if (CID != "")
             {
-                if (textBoxName1.Text.Trim() == string.Empty || textBoxHmStudent1.Text.Trim() == string.Empty)
+                if (textBoxName1.Text.Trim() == string.Empty || textBoxHmStudent1.Text.Trim() == string.Empty || textBoxMale1.Text.Trim() == string.Empty || textBoxFemale1.Text.Trim() == string.Empty)
                 {
                     MessageBox.Show("Fill out all data.", "Require all fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 else
                 {
-                    DialogResult dialogResult = MessageBox.Show("Delete this Class?", "Delete Class", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dialogResult == DialogResult.Yes)
+                    DialogResult dialogResult = MessageBox.Show("Delete Class??", "Delete Class", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if(dialogResult == DialogResult.Yes)
                     {
-                        ClearTextBox1();
+                        bool check = Attendance.Attendance.DeleteClass(CID, sql);
+
+                        if (check)
+                            ClearTextBox1();
                     }
                 }
             }
@@ -149,6 +165,26 @@ namespace Attendance_System81.main.User_Control
             {
                 MessageBox.Show("Please Select Row from Table.", "Select Row", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void textBoxMale_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            IntegerType(e);
+        }
+
+        private void textBoxFemale_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            IntegerType(e);
+        }
+
+        private void textBoxFemale1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            IntegerType(e);
+        }
+
+        private void textBoxMale1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            IntegerType(e);
         }
     }
 }

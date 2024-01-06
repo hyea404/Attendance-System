@@ -18,3 +18,13 @@ CREATE TABLE User_Table
 INSERT INTO User_Table VALUES
 ('user', '123456', '+11 111 111111', '1111-111111-1', '09/18/2021' , 'Male' , 'user@gmail.com', 'User' , 'Indonesian'),
 ('admin', '12345678', '+11 111 111111', '2222-222222-1', '09/18/2021' , 'Male' , 'user@gmail.com', 'Admin' , 'Malaysia');
+
+CREATE TABLE Class_Table
+(
+	Class_ID INT IDENTITY(1, 1),
+	Class_Name VARCHAR(150) UNIQUE,
+	Class_Total INT,
+	Class_Male INT,
+	Class_Female INT,
+	CONSTRAINT Class_Table_PK PRIMARY KEY (Class_ID)
+);
