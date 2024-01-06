@@ -50,6 +50,7 @@
             this.labelTime = new System.Windows.Forms.Label();
             this.timerDateAndTime = new System.Windows.Forms.Timer(this.components);
             this.userControlDashboard1 = new Attendance_System81.main.User_Control.UserControlDashboard();
+            this.userControlAddClass1 = new Attendance_System81.main.User_Control.UserControlAddClass();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -319,12 +320,25 @@
             this.userControlDashboard1.Size = new System.Drawing.Size(930, 498);
             this.userControlDashboard1.TabIndex = 0;
             // 
+            // userControlAddClass1
+            // 
+            this.userControlAddClass1.BackColor = System.Drawing.Color.DimGray;
+            this.userControlAddClass1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlAddClass1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.userControlAddClass1.Location = new System.Drawing.Point(305, 222);
+            this.userControlAddClass1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.userControlAddClass1.Name = "userControlAddClass1";
+            this.userControlAddClass1.Size = new System.Drawing.Size(800, 400);
+            this.userControlAddClass1.TabIndex = 1;
+            this.userControlAddClass1.Visible = false;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1180, 677);
+            this.Controls.Add(this.userControlAddClass1);
             this.Controls.Add(this.userControlDashboard1);
             this.Controls.Add(this.panelSlide);
             this.Controls.Add(this.panelBack);
@@ -371,5 +385,6 @@
         private System.Windows.Forms.Button buttonReport;
         private System.Windows.Forms.Timer timerDateAndTime;
         private User_Control.UserControlDashboard userControlDashboard1;
+        private User_Control.UserControlAddClass userControlAddClass1;
     }
 }

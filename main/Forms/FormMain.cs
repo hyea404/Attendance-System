@@ -60,31 +60,38 @@ namespace Attendance_System81.main.Forms
         {
             userControlDashboard1.Count();
             userControlDashboard1.Visible = true;
+            userControlAddClass1.Visible = false;
         }
 
         private void buttonAttendance_Click(object sender, EventArgs e)
         {
             userControlDashboard1.Visible = false;
+            userControlAddClass1.Visible = false;
         }
 
         private void buttonAddClass_Click(object sender, EventArgs e)
         {
             userControlDashboard1.Visible = false;
+            userControlAddClass1.ClearTextBox();
+            userControlAddClass1.Visible = true;
         }
 
         private void buttonAddStudent_Click(object sender, EventArgs e)
         {
             userControlDashboard1.Visible = false;
+            userControlAddClass1.Visible = false;
         }
 
         private void buttonReport_Click(object sender, EventArgs e)
         {
             userControlDashboard1.Visible = false;
+            userControlAddClass1.Visible = false;
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             userControlDashboard1.Visible = false;
+            userControlAddClass1.Visible = false;
         }
 
     }
