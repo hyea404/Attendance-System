@@ -61,6 +61,12 @@
     <Compile Include="main\Forms\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="main\User Control\UserControlAddClass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="main\User Control\UserControlAddClass.Designer.cs">
+      <DependentUpon>UserControlAddClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="main\User Control\UserControlDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="main\Forms\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main\User Control\UserControlAddClass.resx">
+      <DependentUpon>UserControlAddClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main\User Control\UserControlDashboard.resx">
       <DependentUpon>UserControlDashboard.cs</DependentUpon>
