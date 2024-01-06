@@ -10,3 +10,5 @@ C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance System81.e
 C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance System81.pdb
 C:\Users\LENOVO\source\repos\Attendance System81\bin\Debug\Attendance.dll
 C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance System81.csproj.CopyComplete
+C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance_System81.main.Forms.FormMain.resources
+C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance_System81.main.User_Control.UserControlDashboard.resources

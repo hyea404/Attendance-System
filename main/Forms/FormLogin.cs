@@ -29,6 +29,8 @@ namespace Attendance_System81.main.Forms
                 if (Check != "")
                 {
                     FormMain formMain = new FormMain();
+                    formMain.Username = textBoxName.Text;
+                    formMain.Role = Check;
                     textBoxName.Clear();
                     textBoxPassword.Clear();
                     textBoxName.Focus();
