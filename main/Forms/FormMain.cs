@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Attendance_System81.main.User_Control;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,39 +60,66 @@ namespace Attendance_System81.main.Forms
         private void buttonDashboard_Click(object sender, EventArgs e)
         {
             userControlDashboard1.Count();
+            userControlReport1.Visible = false;
+            userControlAttendance1.Visible = false;
             userControlDashboard1.Visible = true;
+            userControlRegister1.Visible = false;
+            userControlAddStudent1.Visible = false;
             userControlAddClass1.Visible = false;
         }
 
         private void buttonAttendance_Click(object sender, EventArgs e)
         {
             userControlDashboard1.Visible = false;
+            userControlReport1.Visible = false;
+            userControlAttendance1.Visible = true;
             userControlAddClass1.Visible = false;
+            userControlRegister1.Visible = false;
+            userControlAddStudent1.Visible = false;
         }
 
         private void buttonAddClass_Click(object sender, EventArgs e)
         {
             userControlDashboard1.Visible = false;
             userControlAddClass1.ClearTextBox();
+            userControlReport1.Visible = false;
+            userControlAttendance1.Visible = false;
             userControlAddClass1.Visible = true;
+            userControlRegister1.Visible = false;
+            userControlAddStudent1.Visible = false;
         }
 
         private void buttonAddStudent_Click(object sender, EventArgs e)
         {
             userControlDashboard1.Visible = false;
             userControlAddClass1.Visible = false;
+            userControlReport1.Visible = false;
+            userControlRegister1.Visible = false;
+            userControlAttendance1.Visible = false;
+            userControlAddStudent1.ClearTextBox();
+            userControlAddStudent1.Visible = true;
         }
 
         private void buttonReport_Click(object sender, EventArgs e)
         {
             userControlDashboard1.Visible = false;
             userControlAddClass1.Visible = false;
+            userControlRegister1.Visible = false;
+            userControlAddStudent1.Visible = false;
+            userControlAttendance1.Visible = false;
+            userControlReport1.FirstTab();
+            userControlReport1.Visible = true;
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             userControlDashboard1.Visible = false;
+            userControlAddStudent1.Visible = false;
             userControlAddClass1.Visible = false;
+            userControlRegister1.ClearTextBox();
+            userControlRegister1.Visible = true;
+            userControlReport1.Visible = false;
+            userControlAttendance1.Visible = false;
         }
 
     }

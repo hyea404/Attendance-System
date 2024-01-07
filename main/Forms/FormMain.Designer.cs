@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panelSlide = new System.Windows.Forms.Panel();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.buttonReport = new System.Windows.Forms.Button();
             this.buttonAddStudent = new System.Windows.Forms.Button();
@@ -40,6 +39,7 @@
             this.buttonDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelSlide = new System.Windows.Forms.Panel();
             this.panelBack = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.buttonLogOut = new System.Windows.Forms.Button();
@@ -49,8 +49,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labelTime = new System.Windows.Forms.Label();
             this.timerDateAndTime = new System.Windows.Forms.Timer(this.components);
-            this.userControlDashboard1 = new Attendance_System81.main.User_Control.UserControlDashboard();
+            this.userControlAttendance1 = new Attendance_System81.main.User_Control.UserControlAttendance();
+            this.userControlRegister1 = new Attendance_System81.main.User_Control.UserControlRegister();
+            this.userControlAddStudent1 = new Attendance_System81.main.User_Control.UserControlAddStudent();
             this.userControlAddClass1 = new Attendance_System81.main.User_Control.UserControlAddClass();
+            this.userControlDashboard1 = new Attendance_System81.main.User_Control.UserControlDashboard();
+            this.userControlReport1 = new Attendance_System81.main.User_Control.UserControlReport();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -81,14 +85,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(220, 504);
             this.panel4.TabIndex = 2;
-            // 
-            // panelSlide
-            // 
-            this.panelSlide.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelSlide.Location = new System.Drawing.Point(-2, 12);
-            this.panelSlide.Name = "panelSlide";
-            this.panelSlide.Size = new System.Drawing.Size(10, 653);
-            this.panelSlide.TabIndex = 0;
             // 
             // buttonRegister
             // 
@@ -207,6 +203,14 @@
             this.label1.Text = "Attendance\r\nSystem";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panelSlide
+            // 
+            this.panelSlide.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelSlide.Location = new System.Drawing.Point(-2, 12);
+            this.panelSlide.Name = "panelSlide";
+            this.panelSlide.Size = new System.Drawing.Size(10, 653);
+            this.panelSlide.TabIndex = 0;
+            // 
             // panelBack
             // 
             this.panelBack.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -308,17 +312,40 @@
             // 
             this.timerDateAndTime.Tick += new System.EventHandler(this.timerDateAndTime_Tick);
             // 
-            // userControlDashboard1
+            // userControlAttendance1
             // 
-            this.userControlDashboard1.BackColor = System.Drawing.Color.DimGray;
-            this.userControlDashboard1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.userControlDashboard1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlDashboard1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.userControlDashboard1.Location = new System.Drawing.Point(238, 167);
-            this.userControlDashboard1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.userControlDashboard1.Name = "userControlDashboard1";
-            this.userControlDashboard1.Size = new System.Drawing.Size(930, 498);
-            this.userControlDashboard1.TabIndex = 0;
+            this.userControlAttendance1.BackColor = System.Drawing.Color.DimGray;
+            this.userControlAttendance1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlAttendance1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.userControlAttendance1.Location = new System.Drawing.Point(305, 167);
+            this.userControlAttendance1.Margin = new System.Windows.Forms.Padding(4);
+            this.userControlAttendance1.Name = "userControlAttendance1";
+            this.userControlAttendance1.Size = new System.Drawing.Size(800, 500);
+            this.userControlAttendance1.TabIndex = 0;
+            this.userControlAttendance1.Visible = false;
+            // 
+            // userControlRegister1
+            // 
+            this.userControlRegister1.BackColor = System.Drawing.Color.DimGray;
+            this.userControlRegister1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlRegister1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.userControlRegister1.Location = new System.Drawing.Point(305, 222);
+            this.userControlRegister1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.userControlRegister1.Name = "userControlRegister1";
+            this.userControlRegister1.Size = new System.Drawing.Size(800, 400);
+            this.userControlRegister1.TabIndex = 0;
+            // 
+            // userControlAddStudent1
+            // 
+            this.userControlAddStudent1.BackColor = System.Drawing.Color.DimGray;
+            this.userControlAddStudent1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlAddStudent1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.userControlAddStudent1.Location = new System.Drawing.Point(305, 222);
+            this.userControlAddStudent1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.userControlAddStudent1.Name = "userControlAddStudent1";
+            this.userControlAddStudent1.Size = new System.Drawing.Size(800, 400);
+            this.userControlAddStudent1.TabIndex = 0;
+            this.userControlAddStudent1.Visible = false;
             // 
             // userControlAddClass1
             // 
@@ -332,12 +359,40 @@
             this.userControlAddClass1.TabIndex = 1;
             this.userControlAddClass1.Visible = false;
             // 
+            // userControlDashboard1
+            // 
+            this.userControlDashboard1.BackColor = System.Drawing.Color.DimGray;
+            this.userControlDashboard1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.userControlDashboard1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlDashboard1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.userControlDashboard1.Location = new System.Drawing.Point(238, 167);
+            this.userControlDashboard1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.userControlDashboard1.Name = "userControlDashboard1";
+            this.userControlDashboard1.Size = new System.Drawing.Size(930, 498);
+            this.userControlDashboard1.TabIndex = 0;
+            // 
+            // userControlReport1
+            // 
+            this.userControlReport1.BackColor = System.Drawing.Color.DimGray;
+            this.userControlReport1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlReport1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.userControlReport1.Location = new System.Drawing.Point(305, 167);
+            this.userControlReport1.Margin = new System.Windows.Forms.Padding(4);
+            this.userControlReport1.Name = "userControlReport1";
+            this.userControlReport1.Size = new System.Drawing.Size(800, 500);
+            this.userControlReport1.TabIndex = 0;
+            this.userControlReport1.Visible = false;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1180, 677);
+            this.Controls.Add(this.userControlReport1);
+            this.Controls.Add(this.userControlAttendance1);
+            this.Controls.Add(this.userControlRegister1);
+            this.Controls.Add(this.userControlAddStudent1);
             this.Controls.Add(this.userControlAddClass1);
             this.Controls.Add(this.userControlDashboard1);
             this.Controls.Add(this.panelSlide);
@@ -386,5 +441,9 @@
         private System.Windows.Forms.Timer timerDateAndTime;
         private User_Control.UserControlDashboard userControlDashboard1;
         private User_Control.UserControlAddClass userControlAddClass1;
+        private User_Control.UserControlAddStudent userControlAddStudent1;
+        private User_Control.UserControlRegister userControlRegister1;
+        private User_Control.UserControlAttendance userControlAttendance1;
+        private User_Control.UserControlReport userControlReport1;
     }
 }

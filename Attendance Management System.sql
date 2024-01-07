@@ -1,5 +1,7 @@
 CREATE DATABASE Attendance_Management_System;
 
+USE Attendance_Management_System;
+
 CREATE TABLE User_Table
 (
 	User_Id INT IDENTITY(1,1),
@@ -28,3 +30,26 @@ CREATE TABLE Class_Table
 	Class_Female INT,
 	CONSTRAINT Class_Table_PK PRIMARY KEY (Class_ID)
 );
+
+CREATE TABLE Student_Table
+(
+	Student_ID INT IDENTITY(1, 1),
+	Student_Name VARCHAR(150),
+	Student_Reg VARCHAR(50) UNIQUE,
+	Student_Gender VARCHAR(10),
+	Class_ID INT,
+	CONSTRAINT Student_Table_PK PRIMARY KEY (Student_ID),
+	CONSTRAINT Student_Table_FK FOREIGN KEY (Class_ID) REFERENCES Class_Table (Class_ID) ON DELETE CASCADE
+)
+
+CREATE TABLE Attendance_Table
+(
+	Attendance_ID INT IDENTITY(1, 1),
+	Attendance_Date VARCHAR(10),
+	Attendance_Status VARCHAR(10) DEFAULT 'Absent',
+	Student_ID INT,
+	CONSTRAINT Attendance_Table_PK PRIMARY KEY (Attendance_ID),
+	CONSTRAINT Attendance_Table_FK FOREIGN KEY (Student_ID) REFERENCES Student_Table (Student_ID) ON DELETE CASCADE
+)
+
+SELECT * FROM Attendance_Table

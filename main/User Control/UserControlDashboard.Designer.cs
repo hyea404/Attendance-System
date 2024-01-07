@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.labelTotalClasses = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelTotalStudent = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,6 +55,18 @@
             this.panel1.Size = new System.Drawing.Size(243, 121);
             this.panel1.TabIndex = 0;
             // 
+            // labelTotalClasses
+            // 
+            this.labelTotalClasses.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTotalClasses.AutoSize = true;
+            this.labelTotalClasses.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalClasses.Location = new System.Drawing.Point(93, 57);
+            this.labelTotalClasses.Name = "labelTotalClasses";
+            this.labelTotalClasses.Size = new System.Drawing.Size(56, 37);
+            this.labelTotalClasses.TabIndex = 0;
+            this.labelTotalClasses.Text = "(?)";
+            this.labelTotalClasses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -66,25 +78,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Classes";
             // 
-            // labelTotalClasses
-            // 
-            this.labelTotalClasses.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTotalClasses.AutoSize = true;
-            this.labelTotalClasses.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalClasses.Location = new System.Drawing.Point(90, 57);
-            this.labelTotalClasses.Name = "labelTotalClasses";
-            this.labelTotalClasses.Size = new System.Drawing.Size(56, 37);
-            this.labelTotalClasses.TabIndex = 0;
-            this.labelTotalClasses.Text = "(?)";
-            this.labelTotalClasses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.labelTotalStudent);
             this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.labelTotalStudent);
             this.panel2.ForeColor = System.Drawing.Color.DimGray;
             this.panel2.Location = new System.Drawing.Point(275, 114);
             this.panel2.Name = "panel2";
@@ -96,7 +96,7 @@
             this.labelTotalStudent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTotalStudent.AutoSize = true;
             this.labelTotalStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalStudent.Location = new System.Drawing.Point(90, 57);
+            this.labelTotalStudent.Location = new System.Drawing.Point(91, 57);
             this.labelTotalStudent.Name = "labelTotalStudent";
             this.labelTotalStudent.Size = new System.Drawing.Size(56, 37);
             this.labelTotalStudent.TabIndex = 0;
@@ -132,7 +132,7 @@
             this.labelTotalRole.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTotalRole.AutoSize = true;
             this.labelTotalRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalRole.Location = new System.Drawing.Point(90, 57);
+            this.labelTotalRole.Location = new System.Drawing.Point(96, 57);
             this.labelTotalRole.Name = "labelTotalRole";
             this.labelTotalRole.Size = new System.Drawing.Size(56, 37);
             this.labelTotalRole.TabIndex = 0;

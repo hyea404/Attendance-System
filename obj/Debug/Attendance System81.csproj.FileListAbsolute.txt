@@ -13,3 +13,7 @@ C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance System81.c
 C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance_System81.main.Forms.FormMain.resources
 C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance_System81.main.User_Control.UserControlDashboard.resources
 C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance_System81.main.User_Control.UserControlAddClass.resources
+C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance_System81.main.User_Control.UserControlAddStudent.resources
+C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance_System81.main.User_Control.UserControlRegister.resources
+C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance_System81.main.User_Control.UserControlAttendance.resources
+C:\Users\LENOVO\source\repos\Attendance System81\obj\Debug\Attendance_System81.main.User_Control.UserControlReport.resources

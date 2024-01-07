@@ -21,6 +21,9 @@ namespace Attendance_System81.main.User_Control
 
         public void Count()
         {
+            labelTotalClasses.Text = Attendance.Attendance.Count("SELECT COUNT(*) FROM Class_Table;", sql).ToString();
+            labelTotalStudent.Text = Attendance.Attendance.Count("SELECT COUNT(*) FROM Student_Table;", sql).ToString();
+            labelTotalRole.Text = Attendance.Attendance.Count("SELECT COUNT(*) FROM User_Table;", sql).ToString();
 
         }
 
